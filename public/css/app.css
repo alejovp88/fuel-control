@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+#sidebar .menu ul li a {
+  color: #FFF;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.sidebar-content {
+  width: 100%;
+}
+
+.main-content-div {
+  overflow: auto;
+  max-height: 100vh;
+}
+
+.nav-link svg {
+  font-size: 20px !important;
+}
+
+.sidebar {
+  min-width: 260px;
+  max-width: 260px;
+  transition: margin-left 0.35s ease-in-out, left 0.35s ease-in-out, margin-right 0.35s ease-in-out, right 0.35s ease-in-out;
+  direction: ltr;
+  background: #222E3C;
+}
+
+.sidebar-content {
+  transition: margin-left 0.35s ease-in-out, left 0.35s ease-in-out, margin-right 0.35s ease-in-out, right 0.35s ease-in-out;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  background: #222E3C;
+}
+
+.sidebar-nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  flex-grow: 1;
+}
+
+.sidebar-link,
+a.sidebar-link {
+  display: block;
+  padding: 0.625rem 1.625rem;
+  font-weight: 400;
+  transition: background 0.1s ease-in-out;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  border-left-style: solid;
+  border-left-width: 3px;
+  color: rgba(233, 236, 239, 0.5);
+  background: #222E3C;
+  border-left-color: transparent;
+}
+
+.sidebar-link i,
+.sidebar-link svg,
+a.sidebar-link i,
+a.sidebar-link svg {
+  margin-right: 0.75rem;
+  color: rgba(233, 236, 239, 0.5);
+}
+
+.sidebar-link:focus {
+  outline: 0;
+}
+
+.sidebar-link:hover {
+  color: rgba(233, 236, 239, 0.75);
+  background: #222E3C;
+  border-left-color: transparent;
+}
+
+.sidebar-link:hover i,
+.sidebar-link:hover svg {
+  color: rgba(233, 236, 239, 0.75);
+}
+
+.sidebar-item.active > .sidebar-link,
+.sidebar-item.active .sidebar-link:hover {
+  color: #e9ecef;
+  background: linear-gradient(90deg, rgba(59, 125, 221, 0.1) 0%, rgba(59, 125, 221, 0.0875) 50%, rgba(0, 0, 0, 0) 100%);
+  border-left-color: #3B7DDD;
+}
+
+.sidebar-item.active > .sidebar-link i,
+.sidebar-item.active > .sidebar-link svg,
+.sidebar-item.active .sidebar-link:hover i,
+.sidebar-item.active .sidebar-link:hover svg {
+  color: #e9ecef;
+}
+
+.sidebar-dropdown .sidebar-link {
+  padding: 0.625rem 1.5rem 0.625rem 3.25rem;
+  font-weight: 400;
+  font-size: 90%;
+  border-left: 0;
+  color: #adb5bd;
+  background: transparent;
+}
+
+.sidebar-dropdown .sidebar-link:before {
+  content: "\2192";
+  display: inline-block;
+  position: relative;
+  left: -14px;
+  transition: all 0.1s ease;
+  transform: translateX(0);
+}
+
+.sidebar-dropdown .sidebar-item .sidebar-link:hover {
+  font-weight: 400;
+  border-left: 0;
+  color: #e9ecef;
+  background: transparent;
+}
+
+.sidebar-dropdown .sidebar-item .sidebar-link:hover:hover:before {
+  transform: translateX(4px);
+}
+
+.sidebar-dropdown .sidebar-item.active .sidebar-link {
+  font-weight: 400;
+  border-left: 0;
+  color: #518be1;
+  background: transparent;
+}
+
+.sidebar [data-toggle=collapse] {
+  position: relative;
+}
+
+.sidebar [data-toggle=collapse]:after {
+  content: " ";
+  border: solid;
+  border-width: 0 0.075rem 0.075rem 0;
+  display: inline-block;
+  padding: 2px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  transition: all 0.2s ease-out;
+}
+
+.sidebar [aria-expanded=true]:after,
+.sidebar [data-toggle=collapse]:not(.collapsed):after {
+  transform: rotate(-135deg);
+  top: 1.4rem;
+}
+
+.sidebar-brand {
+  font-weight: 600;
+  font-size: 1.15rem;
+  padding: 1.15rem 1.5rem;
+  display: block;
+  color: #f8f9fa;
+}
+
+.sidebar-brand:hover {
+  text-decoration: none;
+  color: #f8f9fa;
+}
+
+.sidebar-brand:focus {
+  outline: 0;
+}
+
+.sidebar-toggle {
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+}
+
+.sidebar.collapsed {
+  margin-left: -260px;
+}
+
+@media (min-width: 1px) and (max-width: 991.98px) {
+  .sidebar {
+    margin-left: -260px;
+  }
+
+  .sidebar.collapsed {
+    margin-left: 0;
+  }
+}
+
+.sidebar-toggle {
+  margin-right: 1rem;
+}
+
+.sidebar-header {
+  background: transparent;
+  padding: 1.5rem 1.5rem 0.375rem;
+  font-size: 0.75rem;
+  color: #ced4da;
+}
+
+.sidebar-badge {
+  position: absolute;
+  right: 15px;
+  top: 14px;
+  z-index: 1;
+}
+
+.sidebar-cta-content {
+  padding: 1.5rem;
+  margin: 1.75rem;
+  border-radius: 0.3rem;
+  background: #2B3947;
+  color: #e9ecef;
+}
+
